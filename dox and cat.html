@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+    function greeting(){
+        let name=prompt("Plase input your name:");
+        window.alert('Hello'+name);
+        document.getElementById('demo').innerHTML='Hello'+name;
+    }
+    function changetored(){
+        document.getElementById('demo').style.color = 'red';
+    }
+    function changetodog(){
+        document.getElementById('pic').src = 'https://s.isanook.com/wo/0/rp/r/w850/ya0xa0m1w0/aHR0cHM6Ly9zLmlzYW5vb2suY29tL3dvLzAvdWQvNC8yMDkyNy9kMjEuanBn.jpg';
+    }
+    function changetocat(){
+        document.getElementById('pic').src = 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Cat_November_2010-1a.jpg/1200px-Cat_November_2010-1a.jpg';
+    }
+</script>
+</head>
+<body>
+
+<h2>My  JavaScript</h2>
+<img id="pic" src="https://s.isanook.com/wo/0/rp/r/w850/ya0xa0m1w0/aHR0cHM6Ly9zLmlzYW5vb2suY29tL3dvLzAvdWQvNC8yMDkyNy9kMjEuanBn.jpg" width="200em">
+<br>
+<button type="button" 
+    onclick="changetodog()">dog</button>
+<button type="button" 
+    onclick="changetocat()">cat</button>
+<button type="button" 
+    onclick="greeting()">
+Click me to greeting.</button>
+
+<button type="button" 
+    onclick="changetored()">
+
+Click me to display Date and Time.</button>
+<p id="demo"></p>
+
+</body>
+</html> 

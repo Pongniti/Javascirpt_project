@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+    table{
+        background-color:#FEFAE0;
+        border: 4px solid #89B0AE;
+    }
+</style>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product</title>
+</head>
+<body>
+    <script>
+    const productArray = [
+    {id:1,name:"รองเท้า CODECHAOS 22 BOA",price:5900,img:"https://assets.adidas.com/images/w_383,h_383,f_auto,q_auto,fl_lossy,c_fill,g_auto/d1e1115625bf4b4d8559ae2700314791_9366/codechaos-22-boa-spikeless-shoes.jpg"},
+    {id:2,name:"รองเท้า DURAMO SL 2.0",price:2300,img:"https://assets.adidas.com/images/w_320,f_auto,q_auto,fl_lossy,c_fill,g_auto/6b1687abc7424602b5baae6100bb1416_9366/Duramo_SL_2.0_Shoes_Pink_GW4116_01_standard.jpg"},
+    {id:3,name:"รองเท้าพร้อมสายรัด NMD_R1",price:5500,img:"https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/de2b6df507d44e6f8793ae320126bac9_9366/NMD_R1_Strap_Shoes_Pink_GW9469_01_standard.jpg"},
+    {id:4,name:"รองเท้าพื้นหนา NIZZA",price:2700,img:"https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/e05ab433db5a48b4abe7abeb000f0a90_9366/Nizza_Platform_Shoes_White_FV5322_01_standard.jpg"},
+    {id:5,name:"รองเท้า SUPERSTAR",price:4000,img:"https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/7ed0855435194229a525aad6009a0497_9366/SUPERSTAR_SHOES_White_EG4958_01_standard.jpg"},
+    {id:6,name:"รองเท้า STAN SMITH",price:4000,img:"https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/68ae7ea7849b43eca70aac1e00f5146d_9366/Stan_Smith_Shoes_White_FX5502_01_standard.jpg"},
+    {id:7,name:"รองเท้า ULTRABOOST",price:7000,img:"https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/fbaf991a78bc4896a3e9ad7800abcec6_9366/Ultraboost_22_Shoes_Black_GZ0127_01_standard.jpg"},
+    {id:8,name:"รองเท้า DAME 8",price:4700,img:"https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/c017cfced75749518e16ae0e017987ee_9366/Dame_8_Shoes_Blue_GY2770_01_standard.jpg"},
+    {id:9,name:"รองเท้า CODECHAOS 22 BOA",price:6900,img:"https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/1eb3dd7dcefc4754b3c0ae2b001cfab7_9366/Codechaos_22_BOA_Spikeless_Shoes_Black_GX3937_01_standard.jpg"},
+    {id:10,name:"รองเท้าแตะ ADILETTE COMFORT",price:1500,img:"https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/8e36643a89dc4e778d2caeda013f7fed_9366/Adilette_Comfort_Slides_Black_GY1946_02_standard_hover.jpg"},
+    ]
+    let show = true;
+        let text = "<table border='1|1'>";
+        text += "<tr>";
+        text += "<td>"+"id"+"</td>";
+        text += "<td>"+"name"+"</td>";
+        text += "<td>"+"price"+"</td>";
+        text += "<td>"+"img"+"</td>";
+        text += "</tr>";
+        productArray.forEach(v => createTable(v));
+        function createTable(value) {
+            text += "<tr>";
+            text += "<td>"+value.id+"</td>";
+            text += "<td>"+value.name+"</td>";
+            text += "<td>"+value.price+"</td>";
+            text += "<td>"+"<img width=750 height=650 src='"+value.img+"'/>"+"</td>";
+            text += "</tr>"; 
+        }
+        function showTable() {
+            if (show) {
+                document.getElementById("table").innerHTML = text;
+            } else {
+                document.getElementById("table").innerHTML = "";
+            }
+            show = !show;
+        }
+    </script>
+    <button type="button" onclick="showTable()">Show Menu</button>
+    <div id="table"></div>
+</body>
+</html>
